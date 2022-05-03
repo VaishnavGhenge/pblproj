@@ -5,6 +5,12 @@ from editor.models import UserFiles
 from editor.serializers import UserFilesSerializers
 from .authentication import FirebaseAuthentication
 
+@api_view('GET')
+def overview(request):
+    return Response({
+        'save data': '',
+    })
+
 @api_view(['GET', 'POST'])
 def save_data(request):
     try:
