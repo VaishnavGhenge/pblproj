@@ -8,7 +8,10 @@ from .authentication import FirebaseAuthentication
 @api_view('GET')
 def overview(request):
     return Response({
-        'save data': '',
+        'save data': 'http://127.0.0.1:8000/save/',
+        'update data': 'http://127.0.0.1:8000/save/',
+        'retrieve': 'http://127.0.0.1:8000/retrieve/',
+        'authenticate': 'http://127.0.0.1:8000/authenticate/',
     })
 
 @api_view(['GET', 'POST'])
